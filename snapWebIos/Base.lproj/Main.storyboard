@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="snapWebIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yj-qI-iGo">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faO-Wr-VyX">
+                                <rect key="frame" x="16" y="408.66666666666669" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Open Snap"/>
+                                <connections>
+                                    <action selector="openSnap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mnm-yt-Uia"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWE-oH-s6X">
+                                <rect key="frame" x="16" y="366.66666666666669" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4yj-qI-iGo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0mj-Gi-Olr"/>
+                            <constraint firstItem="faO-Wr-VyX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Tl-AQ-UUM"/>
+                            <constraint firstItem="4yj-qI-iGo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Btq-7N-3R8"/>
+                            <constraint firstItem="faO-Wr-VyX" firstAttribute="top" secondItem="pWE-oH-s6X" secondAttribute="bottom" constant="8" id="LQf-vi-ssh"/>
+                            <constraint firstItem="faO-Wr-VyX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lvb-E5-Jkx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="faO-Wr-VyX" secondAttribute="trailing" constant="16" id="MIz-Dp-ULn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pWE-oH-s6X" secondAttribute="trailing" constant="16" id="PJi-cp-lHn"/>
+                            <constraint firstItem="4yj-qI-iGo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="R3b-p3-zAH"/>
+                            <constraint firstItem="pWE-oH-s6X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UcA-Bq-jTK"/>
+                            <constraint firstItem="4yj-qI-iGo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gxI-xt-UcX"/>
+                            <constraint firstItem="faO-Wr-VyX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qza-b8-h4N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="payButton" destination="faO-Wr-VyX" id="WYR-gx-DVD"/>
+                        <outlet property="textFieldUrl" destination="pWE-oH-s6X" id="UxA-fd-nJf"/>
+                        <outlet property="webView" destination="4yj-qI-iGo" id="0lz-gL-vOx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+        <!--Result-->
+        <scene sceneID="Umy-2H-LhY">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" title="Result" id="gIn-yC-mlH" customClass="ResultViewController" customModule="snapWebIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jVy-pp-Kwb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxL-uD-wH5">
+                                <rect key="frame" x="151.66666666666666" y="415.66666666666669" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PSp-oP-18b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uxL-uD-wH5" firstAttribute="centerX" secondItem="jVy-pp-Kwb" secondAttribute="centerX" id="gOu-oY-cxu"/>
+                            <constraint firstItem="uxL-uD-wH5" firstAttribute="centerY" secondItem="jVy-pp-Kwb" secondAttribute="centerY" id="ovb-af-Voy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPB-J1-eG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
